@@ -1,17 +1,16 @@
-import React from 'react';
 import bannerImg from '../../assets/bannerImg.png';
 
 const Banner = () => {
     return (
         <div className="max-w-6xl mx-auto mt-8">
-            <div className="bg-gray-100 rounded-2xl px-10 py-16 flex flex-col md:flex-row items-center justify-between">
+            <div className="bg-gray-100 rounded-2xl px-10 py-16 flex flex-col-reverse md:flex-row items-center justify-between  gap-4 md:gap-0">
                 
                 <div className="max-w-lg">
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+                    <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight text-center md:text-left">
                         Books to freshen up your bookshelf
                     </h1>
 
-                    <button className="mt-10 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition">
+                    <button className="mt-10 px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition mx-auto md:mx-0 block">
                         View The List
                     </button>
                 </div>
