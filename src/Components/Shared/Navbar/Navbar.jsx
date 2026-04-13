@@ -1,6 +1,18 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const Navbar = () => {
+    const list = <>
+        <li>
+            <NavLink to={'/'} className={({ isActive }) => `mr-3 font-semibold ${isActive ? "text-green-500 border border-green-500" : ""}`}>Home</NavLink>
+        </li>
+        <li>
+            <NavLink to={'/books'} className={({ isActive }) => `mr-3 font-semibold ${isActive ? "text-green-500 border border-green-500" : ""}`}>Listed Books</NavLink>
+        </li>
+        <li>
+            <NavLink to={'/error'} className={({ isActive }) => `mr-3 font-semibold ${isActive ? "text-green-500 border border-green-500" : ""}`}>Pages To Read</NavLink>
+        </li>
+    </>
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="navbar-start">
@@ -11,36 +23,19 @@ const Navbar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        {list}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">daisyUI</a>
+                <a className="btn btn-ghost text-xl" href='/'>Book Vibe</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul className="p-2 bg-base-100 w-40 z-1">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li><a>Item 3</a></li>
+                    {list}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
+            <div className="navbar-end gap-2">
+                <button className='btn btn-success text-white font-bold'>Sign In</button>
+                <button className='btn btn-accent text-white font-bold'>Sign Up</button>
             </div>
         </div>
     );
