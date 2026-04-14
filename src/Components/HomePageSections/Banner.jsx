@@ -2,7 +2,7 @@ import bannerImg from '../../assets/bannerImg.png';
 
 const Banner = () => {
     return (
-        <div className="max-w-6xl mx-auto mt-8">
+        <div className="w-[95%] md:max-w-6xl mx-auto mt-8">
             <div className="bg-gray-100 rounded-2xl px-10 py-16 flex flex-col-reverse md:flex-row items-center justify-between  gap-4 md:gap-0">
                 
                 <div className="max-w-lg">
