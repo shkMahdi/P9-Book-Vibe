@@ -1,10 +1,11 @@
-import React from 'react';
-import Banner from '../../Components/Banner/Banner';
+import AllBooks from "../../Components/HomePageSections/AllBooks";
+import Banner from "../../Components/HomePageSections/Banner";
 
 const Homepage = () => {
     return (
         <div>
             <Banner></Banner>
+            <AllBooks></AllBooks>
         </div>
     );
 };
